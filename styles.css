@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
-/* VARIABLES */
 :root {
     --primary: #ff69b4;
     --secondary: #8a2be2;
@@ -11,8 +10,6 @@
     --duration-medium: 0.7s;
     --duration-slow: 3s;
 }
-
-/* ANIMACIONES */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -34,7 +31,6 @@
     100% { background-position: 200% 0; }
 }
 
-/* RESET Y BODY */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
     font-family: 'Poppins', sans-serif;
@@ -46,8 +42,6 @@ body {
     animation: fadeInUp var(--duration-medium) ease-out;
     overflow-x: hidden;
 }
-
-/* GRADIENTE ANIMADO ENCIMA */
 body::before {
     content: '';
     position: fixed; top: 0; left: 0;
@@ -59,19 +53,18 @@ body::before {
     backdrop-filter: blur(2px);
 }
 
-/* TÍTULO PRINCIPAL */
 h1 {
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: neonGlow var(--duration-slow) ease-in-out infinite;
     margin-bottom: 1.5rem;
 }
 
-/* SEPARADOR */
 hr {
     width: 60%; height: 4px;
     margin: 2rem auto;
@@ -81,7 +74,6 @@ hr {
     box-shadow: 0 0 20px var(--primary);
 }
 
-/* NAVEGACIÓN */
 nav {
     text-align: center;
     margin-bottom: 2rem;
@@ -113,7 +105,6 @@ nav button:hover {
     box-shadow: 0 0 25px var(--primary);
 }
 
-/* CONTENIDO */
 #contenido {
     background-color: rgba(0,0,0,0.5);
     border-radius: 20px;
@@ -129,7 +120,6 @@ nav button:hover {
     transform: perspective(600px) rotateX(5deg) rotateY(-5deg);
 }
 
-/* SUBTÍTULOS */
 h2 {
     font-size: 1.8rem;
     margin: 1.5rem 0 1rem;
@@ -141,7 +131,6 @@ h2:hover {
     color: var(--secondary);
 }
 
-/* PARÁGRAFOS Y SPAN */
 p, span, #info, div {
     line-height: 1.6;
     text-shadow: 1px 1px 5px var(--primary);
@@ -153,7 +142,6 @@ span { animation-delay: 0.7s; }
 #info { animation-delay: 0.3s; }
 div { animation-delay: 0.9s; }
 
-/* BOTONES GENERALES */
 button {
     background-color: rgba(255,255,255,0.1);
     border: 2px solid var(--primary);
@@ -171,7 +159,6 @@ button:hover {
     color: #000;
 }
 
-/* INPUTS */
 input {
     background-color: rgba(255,255,255,0.1);
     border: 1px solid var(--primary);
@@ -193,7 +180,6 @@ input::placeholder {
     color: #e0e0e0;
 }
 
-/* SCROLLBAR PERSONALIZADO */
 ::-webkit-scrollbar {
     width: 10px;
 }
